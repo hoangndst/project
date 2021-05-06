@@ -1,23 +1,27 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Image, StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import LoginScreen from './screen/LoginScreen';
+const Stack = createStackNavigator();
 
-export default function App() {
-  const handlePress = () => console.log("Pressed");
-  return (
-    <SafeAreaView style={styles.container}>
-      <Text onPress={handlePress}>Open up App.js to start working on your app!</Text>
-      <Image style={imgStyle.icon} source={require('./assets/icon.png')}/>
-      <StatusBar style='dark-content'/>
-    </SafeAreaView>
-  );
+const globalScreenOptions = {
+  headerStyle: { backgroundColor: "#002B36" },
+  headerTitle: { color: "#93A1A1"},
+  
 }
 
-const imgStyle = StyleSheet.create({
-  icon: {
-    width: 50,
-    height: 50
-  }
-});
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name='Login' component={LoginScreen}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
