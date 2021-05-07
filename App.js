@@ -1,23 +1,28 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Image, StatusBar } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, HeaderTitle } from '@react-navigation/stack';
 import LoginScreen from './screen/LoginScreen';
+import RegisterScreen from './screen/RegisterScreen';
+import HomeScreen from './screen/HomeScreen';
 const Stack = createStackNavigator();
 
 const globalScreenOptions = {
-  headerStyle: { backgroundColor: "#002B36" },
-  headerTitle: { color: "#93A1A1"},
-  
+  headerStyle: { backgroundColor: "#004052" },
+  headerTitleStyle: { color: "#fff", alignSelf: 'center'},
+  headerTintColor: 'white'
 }
 
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name='Login' component={LoginScreen}/>
+      <Stack.Navigator screenOptions={globalScreenOptions}>
+        <Stack.Screen name="Login" component={LoginScreen}/>
+        <Stack.Screen name="Register" component={RegisterScreen} />
+        <Stack.Screen name="Home" component={HomeScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -25,7 +30,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
