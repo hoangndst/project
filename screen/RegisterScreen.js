@@ -50,7 +50,7 @@ const RegisterScreen = ({ navigation }) => {
                     leftIcon={
                         <Icon
                         name='user'
-                        type='font-awesome'
+                        type='feather'
                         size={20}
                         color='#2D455E'
                         />
@@ -64,6 +64,7 @@ const RegisterScreen = ({ navigation }) => {
                     style={styles.input}
                     leftIcon={
                         <Icon
+                        type='feather'
                         name='mail'
                         size={20}
                         color='#2D455E'
@@ -79,6 +80,7 @@ const RegisterScreen = ({ navigation }) => {
                     placeholder='Put your fucking password here'
                     leftIcon={
                         <Icon
+                        type='feather'
                         name='lock'
                         size={20}
                         color='#2D455E'
@@ -94,7 +96,7 @@ const RegisterScreen = ({ navigation }) => {
                     leftIcon={
                         <Icon
                         name='image'
-                        type='font-awesome'
+                        type='feather'
                         size={20}
                         color='#2D455E'
                         />

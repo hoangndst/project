@@ -49,6 +49,7 @@ const LoginScreen = ({ navigation }) => {
                     style={styles.input}
                     leftIcon={
                         <Icon
+                        type='feather'
                         name='mail'
                         size={20}
                         color='#2D455E'
@@ -63,6 +64,7 @@ const LoginScreen = ({ navigation }) => {
                     placeholder='Put your fucking password here'
                     leftIcon={
                         <Icon
+                        type='feather'
                         name='lock'
                         size={20}
                         color='#2D455E'
