@@ -10,6 +10,15 @@ const LoginScreen = ({ navigation }) => {
     const [password, setPassword] = useState("");
 
     useEffect(() => {
+        navigation.setOptions({
+            
+            title: "Welcome To 506Gangz",
+            headerStyle: { backgroundColor: '#004052'},
+            headerTitleStyle: { color: "#fff", alignSelf: 'center'},
+            headerTintColor: 'white',
+        });
+        
+
         const unsubscribe = auth.onAuthStateChanged((authUser) => {
             console.log(authUser);
             if(authUser) {
@@ -17,15 +26,21 @@ const LoginScreen = ({ navigation }) => {
             }
         });
         return unsubscribe;
-    }, [])
+    }, []);
+
+    const signIn = () => {
+        auth
+        .signInWithEmailAndPassword(email, password)
+        .catch((error) => alert(error));
+    }
 
     return (
         <KeyboardAvoidingView behavior="height" style={styles.container}>
             <StatusBar style='light'/>
-            <Image source={require('../assets/logo/techs.png')} 
+            <Image source={require('../assets/logo/506s.png')} 
                 style={{
-                    width:100, 
-                    height:100,
+                    width:300, 
+                    height:90,
                 }}
             />
             <View style={styles.inputContainer}>
@@ -55,10 +70,11 @@ const LoginScreen = ({ navigation }) => {
                     secureTextEntry={true}
                     value={password}
                     onChangeText={(text) => setPassword(text)}
+                    onSubmitEditing={signIn}
                 />
             </View>
             <Button containerStyle={styles.button} title="Login" type='solid' 
-
+                    onPress={signIn}
             />
             <Button onPress={() => navigation.navigate("Register")} containerStyle={styles.button} title="Register" type='outline' 
 
