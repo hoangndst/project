@@ -51,7 +51,7 @@ const LoginScreen = ({ navigation }) => {
                         <Icon
                         name='mail'
                         size={20}
-                        color='#004052'
+                        color='#2D455E'
                         />
                     }
                     placeholder='Put your fucking email here'
@@ -65,7 +65,7 @@ const LoginScreen = ({ navigation }) => {
                         <Icon
                         name='lock'
                         size={20}
-                        color='#004052'
+                        color='#2D455E'
                         />
                     }
                     secureTextEntry={true}

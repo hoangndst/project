@@ -42,7 +42,7 @@ const RegisterScreen = ({ navigation }) => {
             <Text h4 style={{
                 alignSelf:'center',
                 marginBottom: 20,
-                color : "#004052"    
+                color : "#2D455E"    
             }}>Create your fucking new account</Text>
             <View style={styles.inputContainer}>
                 <Input
@@ -52,7 +52,7 @@ const RegisterScreen = ({ navigation }) => {
                         name='user'
                         type='font-awesome'
                         size={20}
-                        color='#004052'
+                        color='#2D455E'
                         />
                     }
                     type="text"
@@ -66,7 +66,7 @@ const RegisterScreen = ({ navigation }) => {
                         <Icon
                         name='mail'
                         size={20}
-                        color='#004052'
+                        color='#2D455E'
                         />
                     }
                     textContentType="emailAddress"
@@ -81,7 +81,7 @@ const RegisterScreen = ({ navigation }) => {
                         <Icon
                         name='lock'
                         size={20}
-                        color='#004052'
+                        color='#2D455E'
                         />
                     }
                     textContentType="password"
@@ -96,7 +96,7 @@ const RegisterScreen = ({ navigation }) => {
                         name='image'
                         type='font-awesome'
                         size={20}
-                        color='#004052'
+                        color='#2D455E'
                         />
                     }
                     type="text"

@@ -4,8 +4,8 @@ import { StatusBar } from 'expo-status-bar'
 import { Avatar } from 'react-native-elements'
 import CustomListItem from '../components/CustomListItem'
 import { auth, db } from '../firebase'
-
-
+import { AntDesign, SimpleLineIcons } from "@expo/vector-icons"
+import { Icon } from 'react-native-elements'
 const HomeScreen = ({ navigation }) => {
 
     const signOutUser = () => {
@@ -31,6 +31,20 @@ const HomeScreen = ({ navigation }) => {
                     />
                     </TouchableOpacity>
                 </View> 
+            ),
+            headerRight: () => (
+                <View style={{
+                    marginRight: 10,
+                }}>
+                    <TouchableOpacity activeOpacity={0.5}>
+                        <Icon 
+                            type='font-awesome'
+                            name="camera" 
+                            color="white"
+                            size={24}
+                        />
+                    </TouchableOpacity>
+                </View>
             ),
         });
     }, []);
