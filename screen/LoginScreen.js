@@ -12,8 +12,8 @@ const LoginScreen = ({ navigation }) => {
     useEffect(() => {
         navigation.setOptions({
             
-            title: "Welcome To 506Gangz",
-            headerStyle: { backgroundColor: '#004052'},
+            title: "Login",
+            headerStyle: { backgroundColor: '#2089DC'},
             headerTitleStyle: { color: "#fff", alignSelf: 'center'},
             headerTintColor: 'white',
         });
@@ -36,11 +36,12 @@ const LoginScreen = ({ navigation }) => {
 
     return (
         <KeyboardAvoidingView behavior="height" style={styles.container}>
-            <StatusBar style='light'/>
-            <Image source={require('../assets/logo/506s.png')} 
+            <StatusBar style='light' />
+            <Image source={require('../assets/logo/506.png')} 
                 style={{
-                    width:300, 
-                    height:90,
+                    width: 300, 
+                    height: 160,
+    
                 }}
             />
             <View style={styles.inputContainer}>

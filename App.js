@@ -10,7 +10,7 @@ import HomeScreen from './screen/HomeScreen';
 const Stack = createStackNavigator();
 
 const globalScreenOptions = {
-  headerStyle: { backgroundColor: "#004052" },
+  headerStyle: { backgroundColor: "#2089DC" },
   headerTitleStyle: { color: "#fff"},
   headerTintColor: 'white',
 }

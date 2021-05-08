@@ -14,7 +14,10 @@ const RegisterScreen = ({ navigation }) => {
 
     useLayoutEffect(() => {
         navigation.setOptions({
-            headerBackTitle: 'Back',
+            title: "Register",
+            headerStyle: { backgroundColor: '#2089DC'},
+            headerTitleStyle: { color: "#fff", alignSelf: 'auto'},
+            headerTintColor: 'white',
         });
     }, [navigation]);
 

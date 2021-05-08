@@ -13,12 +13,11 @@ const HomeScreen = ({ navigation }) => {
             navigation.replace('Login');
         });
     }
-
     useLayoutEffect(() => {
         navigation.setOptions({
             
             title: "Whatzup"+ " " + auth.currentUser.displayName,
-            headerStyle: { backgroundColor: '#004052'},
+            headerStyle: { backgroundColor: '#2089DC'},
             headerTitleStyle: { color: "#fff",},
             headerTintColor: 'white',
             headerLeft: () => (
