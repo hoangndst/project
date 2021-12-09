@@ -1,0 +1,39 @@
+.info {
+    display: flex;
+    font-size: medium;
+    justify-content: space-between;
+    margin: 40px auto;
+    max-width: 650px;
+    padding: 0 20px;
+}
+
+.block {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 10px;
+}
+
+.key {
+    align-items: center;
+    display: flex;
+}
+
+.compare {
+    background-color: #fff461;
+}
+
+.swap {
+    background-color: #ff9f9f;
+}
+
+.sorted {
+    background-color: #9fff9f;
+}
+
+@media (max-width: 800px) { 
+    .info {
+        font-size: small;
+        text-align: center;
+    }
+}
