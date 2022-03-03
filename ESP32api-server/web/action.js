@@ -22,7 +22,6 @@ function httpGET(url, callback) {
     req.send();
 }
 
-
 function led26() {
 
     httpGET(server + "/led/26", function (data) {
@@ -59,4 +58,26 @@ function led27() {
         }
     });
     
+}
+
+function updateApp() {
+    var led26button = document.getElementById("led26button");
+    var led27button = document.getElementById("led27button");
+    httpGET(server + "/led", function (data) {
+        var led = JSON.parse(data);
+        console.log(led);
+        var led26Status = led[0].status;
+        var led27Status = led[1].status;
+        if (led26Status == 0) {
+            led26button.checked = false;
+        } else {
+            led26button.checked = true;
+        }
+
+        if (led27Status == 0) {
+            led27button.checked = false;
+        } else {
+            led27button.checked = true;
+        }
+    });
 }
