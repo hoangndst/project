@@ -90,14 +90,14 @@ export default function Devices() {
   return (
     <div style={ { width: '365px' } }>
         <Alert
-            style={{ margin: '0px 8px 10px 8px', fontWeight: 'bold' }}
+            style={{ margin: '0px 10px 10px 10px', fontWeight: 'bold' }}
             severity="info">
-            It's beta, don't expect too much!
+            It's beta version, don't expect too much!
         </Alert>
         <Paper
             sx={{
                 p: 2,
-                margin: '0px 8px 10px 8px',
+                margin: '0px 10px 10px 10px',
                 maxWidth: 500,
                 flexGrow: 1,
                 backgroundColor: (theme) =>
@@ -133,7 +133,7 @@ export default function Devices() {
         <Paper
             sx={{
                 p: 2,
-                margin: '0px 8px 10px 8px',
+                margin: '0px 10px 10px 10px',
                 maxWidth: 500,
                 flexGrow: 1,
                 backgroundColor: (theme) =>
@@ -148,7 +148,7 @@ export default function Devices() {
                     <Item>
                         {videoStreamActive ? (
                             <img
-                                src="http://192.168.43.244:81/stream" 
+                                src="http://192.168.43.244" 
                                 alt="video-stream" 
                                 style={{ width: '100%', height: '100%' , borderRadius: '5px' }} 
                             />
@@ -165,7 +165,7 @@ export default function Devices() {
                     <Button 
                         variant="contained"
                         onClick={() => setVideoStreamActive(!videoStreamActive)}
-                    >
+                   >
                         {cameraButtonName}
                     </Button>
                 </Grid>
