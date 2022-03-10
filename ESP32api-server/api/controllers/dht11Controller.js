@@ -19,6 +19,15 @@ module.exports = {
         });
     },
     
+    update: (req, res) => {
+        let data = req.body;
+        let sql = 'UPDATE dht11 SET ?';
+        db.query(sql, [data], (err, result) => {
+            if (err) throw err;
+            res.json({message: 'Update success!'});
+        });
+    },
+
     store: (req, res) => {
         let data = req.body;
         let sql = 'INSERT INTO dht11 SET ?';

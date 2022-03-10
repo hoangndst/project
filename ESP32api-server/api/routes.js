@@ -10,5 +10,5 @@ module.exports = function(app) {
         .put(ledController.update);
     app.route('/dht11')
         .get(dht11Controller.detail)
-        .post(dht11Controller.store);
+        .put(dht11Controller.update);
 };
