@@ -175,7 +175,7 @@ export default function Information() {
             <Grid container spacing={2} marginTop={'5px'}>
                 <Grid item xs={6} md={6}>
                     <Item>
-                        Temperature: {data[data.length - 1] ? data[data.length - 1].temperature : '-'}
+                        Temperature: {data[data.length - 1] ? data[data.length - 1].temperature : '-'} °C
                     </Item>
                 </Grid>
                 <Grid item xs={6} md={6}>
