@@ -12,30 +12,19 @@ module.exports = {
     },
     
     detail: (req, res) => {
-        let sql = 'SELECT * FROM `dht11` WHERE ORDER BY `id` DESC LIMIT 1';
+        let sql = 'SELECT * FROM `dht11`';
         db.query(sql, [req.params.id], (err, result) => {
             if (err) throw err;
             res.json(result);
         });
     },
-
-    update: (req, res) => {
-        let data = req.body;
-        let ledId = req.params.id;
-        let sql = 'UPDATE led SET ? WHERE id = ?';
-        db.query(sql, [data, ledId], (err, result) => {
-            if (err) throw err;
-            res.json({message: 'Update success!'});
-        });
-    },
     
     store: (req, res) => {
         let data = req.body;
-        let sql = 'INSERT INTO led SET ?';
+        let sql = 'INSERT INTO dht11 SET ?';
         db.query(sql, data, (err, result) => {
             if (err) throw err;
             res.json({message: 'Insert success!'});
-        }
-        );
+        });
     }
 }

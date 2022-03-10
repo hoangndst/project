@@ -35,7 +35,6 @@ module.exports = {
         db.query(sql, data, (err, result) => {
             if (err) throw err;
             res.json({message: 'Insert success!'});
-        }
-        );
+        });
     }
 }
