@@ -63,6 +63,7 @@ export function led27() {
 
 export const getLedStatusById = (id) => axios.get(server + "/led/" + id).then(res => res.data[0].status);
 
+export const getDht11Data = () => axios.get(server + "/dht11").then(res => res.data);
 
 // function updateApp()A {
 //     var led26button = document.getElementById("led26button");

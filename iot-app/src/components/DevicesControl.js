@@ -1,7 +1,7 @@
 import { Grid, Paper, Alert, Typography, FormControlLabel, Skeleton, Button } from '@mui/material'
 import Switch from '@mui/material/Switch';
 import { styled } from '@mui/material/styles'
-import React, { useState } from 'react'
+import React from 'react'
 import { useEffect } from 'react';
 import { led26, led27, getLedStatusById } from '../controller/action';
 
@@ -47,7 +47,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 
-export default function Devices() {
+export default function DevicesControl() {
 
     const [led26Status, setLed26Status] = React.useState(false);
 
@@ -88,17 +88,17 @@ export default function Devices() {
 
 
   return (
-    <div style={ { width: '365px' } }>
+    <div style={ { width: '100%', margin: '0 auto' } }>
         <Alert
-            style={{ margin: '0px 10px 10px 10px', fontWeight: 'bold' }}
+            style={{ marginBottom: '10px', fontWeight: 'bold' }}
             severity="info">
-            It's beta version, don't expect too much!
+            It's beta, don't expect too much!
         </Alert>
         <Paper
             sx={{
-                p: 2,
-                margin: '0px 10px 10px 10px',
-                maxWidth: 500,
+                p: 1,
+                marginBottom: '10px',
+                maxWidth: '100%',
                 flexGrow: 1,
                 backgroundColor: (theme) =>
                 theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -132,9 +132,9 @@ export default function Devices() {
         </Paper>
         <Paper
             sx={{
-                p: 2,
-                margin: '0px 10px 10px 10px',
-                maxWidth: 500,
+                p: 1,
+                marginBottom: '10px',
+                maxWidth: '100%',
                 flexGrow: 1,
                 backgroundColor: (theme) =>
                 theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -154,8 +154,8 @@ export default function Devices() {
                             />
                         ) : (
                             <Skeleton variant="rectangular"  
-                                sx={{ bgcolor: 'grey.900' }}
-                                style={{ width: '100%', height: '230px', borderRadius: '5px'}}
+                                sx={{ bgcolor: 'grey.900', margin: '0 auto' }}
+                                style={{ width: '230px', height: '230px', borderRadius: '5px'}}
                             />
                         )}
                     </Item>
