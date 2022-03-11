@@ -1,9 +1,7 @@
 import { Grid, Paper, Alert, Typography } from '@mui/material'
-// import Switch from '@mui/material/Switch';
 import { styled } from '@mui/material/styles'
 import React from 'react'
 import { useEffect } from 'react';
-// import { DatePicker } from '@mui/lab';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import CalendarPicker from '@mui/lab/CalendarPicker';
@@ -58,38 +56,40 @@ export default function Information() {
     const [data, setData] = React.useState([]);
     const [date, setDate] = React.useState(new Date());
 
-    const [chartData, setChartData] = React.useState({
+    const [chartTempData, setChartTempData] = React.useState({
         labels: data.map(item => item.time),
         datasets: [
             {
                 label: "Temperature",
                 data: data.map(item => item.temperature),
                 backgroundColor: [
-                  "rgba(75,192,192,1)",
+                //   "rgba(75,192,192,1)",
                   "#ecf0f1",
-                  "#50AF95",
-                  "#f3ba2f",
-                  "#2a71d0",
+                //   "#50AF95",
+                //   "#f3ba2f",
+                //   "#2a71d0",
                 ],
                 borderColor: "black",
                 borderWidth: 2,
             },
-
+        ],
+    });
+    const [chartHumdData, setChartHumdData] = React.useState({
+        labels: data.map(item => item.time),
+        datasets: [
             {
                 label: "Humidity",
                 data: data.map(item => item.humidity),
                 backgroundColor: [
-                  "rgba(75,192,192,1)",
+                //   "rgba(75,192,192,1)",
                   "#ecf0f1",
-                  "#50AF95",
-                  "#f3ba2f",
-                  "#2a71d0",
+                //   "#50AF95",
+                //   "#f3ba2f",
+                //   "#2a71d0",
                 ],
-                borderColor: "black",
+                borderColor: "#0047AB",
                 borderWidth: 2,
             },
-
-
         ],
     });
 
@@ -107,7 +107,7 @@ export default function Information() {
                 let newData = data;
                 newData.push(tmp);
                 setData(newData);
-                setChartData({
+                setChartTempData({
                     labels: data.map(item => item.time),
                     datasets: [
                         {
@@ -123,7 +123,12 @@ export default function Information() {
                             borderColor: "black",
                             borderWidth: 2,
                         },
+                    ],
+                });
 
+                setChartHumdData({
+                    labels: data.map(item => item.time),
+                    datasets: [
                         {
                             label: "Humidity",
                             data: data.map(item => item.humidity),
@@ -134,7 +139,7 @@ export default function Information() {
                             //   "#f3ba2f",
                             //   "#2a71d0",
                             ],
-                            borderColor: "#3e95cd",
+                            borderColor: "#0047AB",
                             borderWidth: 2,
                         },
                     ],
@@ -168,7 +173,12 @@ export default function Information() {
             <Grid container spacing={2}>
                 <Grid item xs={12} md={12}>
                     <Item>
-                        <Line data={chartData} />
+                        <Line data={chartTempData} />
+                    </Item>
+                </Grid>
+                <Grid item xs={12} md={12}>
+                    <Item>
+                        <Line data={chartHumdData} />
                     </Item>
                 </Grid>
             </Grid>
