@@ -4,12 +4,6 @@ This application:
 - Control the IoT device.
 - Receives data from the IoT device, server and displays it on the web page.
 
-### Demo
-<img src="src/asserts/one.png" height="400"/>
-<img src="src/asserts/two.png" height="400"/> 
-
-
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Available Scripts
