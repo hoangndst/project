@@ -26,9 +26,9 @@ async function welcome() {
     let rows = res.rows;
     for (let i = 0; i < rows.length; i++) {
       if (rows[i].col2[0] === '-') {
-        rows[i].col2 = chalk.bgRed(rows[i].col2);
+        rows[i].col2 = chalk.bgRed(rows[i].col2) + '\n';
       } else {
-        rows[i].col2 = chalk.bgGreen(rows[i].col2);
+        rows[i].col2 = chalk.bgGreen(rows[i].col2) + '\n';
       }
     }
     let table = chalkTable(options, rows);
@@ -37,18 +37,8 @@ async function welcome() {
     `);
     console.log(`${table}`);
   });
-
-//   await sleep();
-//   rainbowTitle.stop();
-
-//   console.log(`
-//     ${chalk.bgBlue('HOW TO PLAY')} 
-//     I am a process on your computer.
-//     If you get any question wrong I will be ${chalk.bgRed('killed')}
-//     So get all the questions right...
-//   `);
 }
 
 
 
-await welcome();
+welcome();
