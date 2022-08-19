@@ -18,7 +18,7 @@ http.createServer((req, res) => {
         return;
     }
 
-    var path = "video" + req.url;
+    var path = "videos" + req.url;
 
     fs.readFile(path, (err, data) => {
         res.writeHead(200, { 'Access-Control-Allow-Origin': '*' });
